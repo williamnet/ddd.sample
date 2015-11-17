@@ -23,8 +23,8 @@ namespace Supplier.Application.Supplier.Select
                     Name = m.Name,
                     Tel = m.Tel,
                     Address = m.Address,
-                    DeliveryStatus = m.CurrentDeliveryStatus(),
-                    BusinessStatus = m.CurrentBusinessStatus()
+                    DeliveryStatus = m.CurrentDeliveryStatus,
+                    BusinessStatus = m.CurrentBusinessStatus
                 }).ToList<dynamic>()
             });
         }

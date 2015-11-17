@@ -47,10 +47,10 @@ namespace Supplier.Application.Models
                 Tel = model.Tel,
                 Address = model.Address,
                 Name = model.Name,
-                BusinessStatus = (int)model.CurrentBusinessStatus(),
+                BusinessStatus = (int)model.CurrentBusinessStatus,
                 BusinessTime = model.BusinessTime.ToBusinessTime(),
                 CreateDate = model.CreateDate,
-                DeliveryStatus = model.CurrentDeliveryStatus(),
+                DeliveryStatus = model.CurrentDeliveryStatus,
                 DeliveryTime = model.DeliveryTime.Select(m => new DeliveryTime() { Start = m.Start.ToTimeModel(), End = m.End.ToTimeModel() }).ToArray(),
                 Coordinates = new Coordinates() { Longitude = model.Coordinates.Longitude, Latitude = model.Coordinates.Latitude }
             };

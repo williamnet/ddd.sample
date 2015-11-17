@@ -88,17 +88,23 @@ namespace Supplier.Model
         /// 获得餐厅当前营业状态
         /// </summary>
         /// <returns></returns>
-        public BusinessStatus CurrentBusinessStatus()
+        public BusinessStatus CurrentBusinessStatus
         {
-            return new BusinessStatusService().GetStatus(this.BusinessStatus, this.BusinessTime);
+            get
+            {
+                return new BusinessStatusService().GetStatus(this.BusinessStatus, this.BusinessTime);
+            }
         }
         /// <summary>
         /// 获得当前餐厅是否可以送餐
         /// </summary>
         /// <returns>true表示可以送外，false表示不可以送餐</returns>
-        public Boolean CurrentDeliveryStatus()
+        public Boolean CurrentDeliveryStatus
         {
-            return new DeliveryStatusService().GetDeliveryStatus(this.CurrentBusinessStatus(), this.DeliveryTime);
+            get
+            {
+                return new DeliveryStatusService().GetDeliveryStatus(this.CurrentBusinessStatus, this.DeliveryTime);
+            }
         }
         /// <summary>
         /// 开启营业，此状态优先级低于按时间的营业状态
