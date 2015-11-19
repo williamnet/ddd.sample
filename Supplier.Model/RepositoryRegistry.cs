@@ -29,5 +29,13 @@ namespace Supplier.Model
                 return factory.Get<ISupplierRepository>();
             }
         }
+
+        public static IDeliveryRepository Delivery
+        {
+            get
+            {
+                return factory.Get<IDeliveryRepository>();
+            }
+        }
     }
 }

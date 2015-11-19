@@ -93,6 +93,7 @@
     <Compile Include="ModelTest\DeliveryStatusServiceTest.cs" />
     <Compile Include="ModelTest\SupplierValidationTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryTest\DeliveryRepositoryTest.cs" />
     <Compile Include="RepositoryTest\SupplierRepositoryTest.cs" />
     <Compile Include="WindowsServiceTest\BaseTest.cs" />
     <Compile Include="WindowsServiceTest\SupplierControllerTest.cs" />
