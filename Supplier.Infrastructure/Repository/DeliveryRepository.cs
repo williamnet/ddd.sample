@@ -48,12 +48,23 @@ namespace Supplier.Infrastructure.Repository
             using (var conn = Database.Open())
             {
                 string ids = string.Join(",", deliveryIds);
-                string sql = @"select * from delivery where id in (@id)";
-                return conn.Query<Model.Delivery>(sql,
+                //in查询，不能使用参数化，会自动加上''
+                //string sql = @"select * from delivery where id in (@id)";
+                //var model = conn.Query<Model.Delivery>(sql,
+                //    new
+                //    {
+                //        id = ids
+                //    });
+
+                string sql = @"select * from delivery where id in ({0})";
+                sql = string.Format(sql, ids);
+                var model = conn.Query<Model.Delivery>(sql,
                     new
                     {
                         id = ids
                     });
+
+                return model;
             }
         }
     }
