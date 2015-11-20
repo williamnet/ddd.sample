@@ -56,9 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationRegistry.cs" />
+    <Compile Include="DeliveryApplication.cs" />
+    <Compile Include="Delivery\FindByIds\FindByIdsReturnTransformer.cs" />
     <Compile Include="Models\AddSupplierModel.cs" />
     <Compile Include="Models\BusinessTime.cs" />
     <Compile Include="Models\Coordinates.cs" />
+    <Compile Include="Models\DeliveryModel.cs" />
     <Compile Include="Models\DeliveryTime.cs" />
     <Compile Include="Models\DetailSupplierModel.cs" />
     <Compile Include="Models\ModelExtension.cs" />

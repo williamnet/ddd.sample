@@ -77,5 +77,15 @@ namespace Supplier.Application.Models
             };
             return time;
         }
+
+        public static DeliveryModel ToDeliveryModel(this Model.Delivery model)
+        {
+            var delivery = new DeliveryModel()
+            {
+                Id = model.Id,
+                Name = model.Name
+            };
+            return delivery;
+        }
     }
 }

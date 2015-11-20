@@ -15,6 +15,7 @@ namespace Supplier.Application
         static ApplicationRegistry()
         {
             ApplicationFactory.Instance().Register(new SupplierApplication());
+            ApplicationFactory.Instance().Register(new DeliveryApplication());
         }
 
         public static SupplierApplication Supplier
@@ -23,6 +24,11 @@ namespace Supplier.Application
             {
                 return ApplicationFactory.Instance().Get<SupplierApplication>();
             }
+        }
+
+        public static DeliveryApplication Delivery
+        {
+            get { return ApplicationFactory.Instance().Get<DeliveryApplication>(); }
         }
     }
 }
